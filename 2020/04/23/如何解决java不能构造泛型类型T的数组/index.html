@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>如何解决java不能构造泛型类型T的数组 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="title: 如何解决java不能构造泛型类型T的数组date: 2020-04-23 20:22:26tags: 解决办法：利用数组构造器​—- 问题描述比如表达式new T[n],这样创建会产生错误的，因为这会被改为new object[n] 例如我们需要建立一个person对象数组，Stream接口有一个toArray方法可以实现返回object数组 Object[] person &#x3D;St">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/04/14/hello-world/index.html">
+<meta property="og:title" content="如何解决java不能构造泛型类型T的数组">
+<meta property="og:url" content="http://yoursite.com/2020/04/23/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3java%E4%B8%8D%E8%83%BD%E6%9E%84%E9%80%A0%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8BT%E7%9A%84%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="title: 如何解决java不能构造泛型类型T的数组date: 2020-04-23 20:22:26tags: 解决办法：利用数组构造器​—- 问题描述比如表达式new T[n],这样创建会产生错误的，因为这会被改为new object[n] 例如我们需要建立一个person对象数组，Stream接口有一个toArray方法可以实现返回object数组 Object[] person &#x3D;St">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-14T10:11:24.101Z">
-<meta property="article:modified_time" content="2020-04-14T10:11:24.101Z">
+<meta property="article:published_time" content="2020-04-23T12:22:26.141Z">
+<meta property="article:modified_time" content="2020-04-23T12:39:57.431Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -154,35 +154,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-如何解决java不能构造泛型类型T的数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      如何解决java不能构造泛型类型T的数组
     </h1>
   
 
         
-        <a href="/2020/04/14/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-14T10:11:24.101Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
+        <a href="/2020/04/23/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3java%E4%B8%8D%E8%83%BD%E6%9E%84%E9%80%A0%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8BT%E7%9A%84%E6%95%B0%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2020-04-23T12:22:26.141Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <hr>
+<p>title: 如何解决java不能构造泛型类型T的数组<br>date: 2020-04-23 20:22:26<br>tags: 解决办法：利用数组构造器<br>​—-</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h4 id="比如表达式new-T-n-这样创建会产生错误的，因为这会被改为new-object-n"><a href="#比如表达式new-T-n-这样创建会产生错误的，因为这会被改为new-object-n" class="headerlink" title="比如表达式new T[n],这样创建会产生错误的，因为这会被改为new object[n]"></a>比如表达式new T[n],这样创建会产生错误的，因为这会被改为new object[n]</h4><p> 例如我们需要建立一个person对象数组，Stream接口有一个toArray方法可以实现返回object数组</p>
+<p>Object[] person =Stream.toArray();</p>
+<p>但是我们想要得到的是一个person引用数组，而不是Object引用数组</p>
+<p>流库利用构造器可以解决这个问题，可以把person[]::new传入toArray方法：</p>
+<p>Person[] person = stream.toArray(person[]::new);</p>
+<p>toArray调用这个构造器来调用得到一个正确类型的数组，然后填充这个数组并返回   </p>
 
       
 
@@ -262,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/14/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/23/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3java%E4%B8%8D%E8%83%BD%E6%9E%84%E9%80%A0%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8BT%E7%9A%84%E6%95%B0%E7%BB%84/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,15 +275,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%E7%BB%88%E4%BA%8E%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E4%BA%86/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/23/boke/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          我的第一个博客终于搭建成功了
+          boke
         
       </div>
     </a>
   
+  
+    <a href="/2020/04/14/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B%E5%B0%B1%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F%E4%BA%86%EF%BC%8C%E5%AE%9E%E5%9C%A8%E6%9C%89%E7%82%B9%E8%BF%B7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">不知道怎么回事就部署成功了，实在有点迷</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

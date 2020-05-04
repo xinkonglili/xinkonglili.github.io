@@ -152,6 +152,350 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-概率论随机变量专题-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/02/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%93%E9%A2%98-1/">&#39;概率论随机变量专题-1&#39;</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/02/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%93%E9%A2%98-1/" class="archive-article-date">
+  	<time datetime="2020-05-02T15:50:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="常用的离散型随机变量"><a href="#常用的离散型随机变量" class="headerlink" title="常用的离散型随机变量"></a>常用的离散型随机变量</h2><h3 id="一、二项分布"><a href="#一、二项分布" class="headerlink" title="一、二项分布"></a><strong>一、二项分布</strong></h3><p>将该随机试验独立重复地进行n次.</p>
+<p><font color=red>独立:</font><strong>是指各次试验的结果互不影响</strong></p>
+<p><font color=red>重复:</font><strong>是指在每次试验中P（A）=p保持不变</strong>，则称这n次独立重复试验叫n重伯努利试验。<br><strong>公式 :说明<script type="math/tex">\dbinom{n}{k}表示同时在序号1到n中挑选k个的不同方法共有\dbinom{n}{k}种</script></strong></p>
+<script type="math/tex; mode=display">P(X=k)= \dbinom{n}{k}p^k(1-p)^{n-k},0<p<1,k=0,1,....,n</script><p>称随机变量X服从参数为n，p的二项分布，记为X~B(n, p)</p>
+<p><font color=red>特别的当n=1时：<script type="math/tex">P(X=k)=\dbinom{1}{k}p^k(1-p)^{1-k}=p^k(1-p)^{1-k},0<p<1,k=0,1</script></font></p>
+<h3 id="二、-泊松分布"><a href="#二、-泊松分布" class="headerlink" title="二、 泊松分布"></a>二、 泊松分布</h3><p>设随机变量X的取值为0,1,2，…，n，….,相应的分布律为</p>
+<script type="math/tex; mode=display">P(X=k)=\frac {\lambda^k} {k!} *e^{-\lambda},\lambda>0,k=0,1,2,...,n...</script><p>称随机变量X服从参数为λ的泊松分布，记为X～P（λ）</p>
+<h4 id="适用的场景"><a href="#适用的场景" class="headerlink" title="适用的场景"></a>适用的场景</h4><p>泊松分布也是一种常用的离散型分布，它常常与计数过程相联系，<br>例如：<br>    （1）某一时段内某网站的点击量；<br>      （2）早高峰时间段内驶入高架道路的车辆数；<br>      （3）一本书上的印刷错误数．</p>
+<h3 id="泊松定理"><a href="#泊松定理" class="headerlink" title="泊松定理"></a>泊松定理</h3><p>　<font color=black> 在n重伯努利试验中，记A事件在一次试验中发生的概率为$ p_n $，如果当n→+∞时，有n$ p_n $→λ（&gt;0），则</p>
+<script type="math/tex; mode=display">\xrightarrow[n\longrightarrow+\Join]{lim}\dbinom{n}{k}p_n^k(1-p_n^{n-k}=\frac {\lambda^k} {k!} *e^{-\lambda})</script><h2 id="常用的连续型随机变量"><a href="#常用的连续型随机变量" class="headerlink" title="常用的连续型随机变量"></a>常用的连续型随机变量</h2><h3 id="一均匀分布"><a href="#一均匀分布" class="headerlink" title="一均匀分布"></a>一均匀分布</h3><p>设X为随机变量，对任意的二个实数a,b(a<b>),<font color=red>概率密度函数为</font>：</p>
+<script type="math/tex; mode=display">f(x) = \begin{cases}
+  \frac{1}{a-b} &\text{if } a<x<b \\
+   0 &\text{if } 其他
+\end{cases}</script><p>则称随机变量X服从区间（a，b）上的均匀分布，记为X～U（a，b）．</p>
+<p>若X～U（a，b），则相应的<font color=red>分布函数为</font>:</p>
+<script type="math/tex; mode=display">F(x) =\begin{cases} 0 &\text{if } x<a \\
+   \frac{x-a}{b-a}&\text{if } a\le x < b\\
+   1&\text{if }  x\ge b
+\end{cases}</script><p><font color = red>注意概率密度函数和分布函数的区别！</font></p>
+<h3 id="二、指数分布"><a href="#二、指数分布" class="headerlink" title="二、指数分布"></a>二、指数分布</h3><p>设<font color=red>X</font>为随机变量，概率密度函数为：</p>
+<script type="math/tex; mode=display">f（x） = \begin{cases}
+    \lambda e^{-\lambda x}&\text{if } x\ge 0 \\
+   0 &\text{if } 其他
+\end{cases}</script><p>则称随机变量X服从参数为λ的指数分布，记为X～E（λ）<br>若X～E（λ），则相应的<font color=red>分布函数为</font>：</p>
+<script type="math/tex; mode=display">F(x) = \begin{cases}
+   0 &\text{if } x<0\\
+   1-e^{-\lambda x} &\text{if } x\ge 0
+\end{cases}</script><p>由此得到，若X～E（λ），0&lt;a&lt;b，则P（a&lt;X≤b）=F（b）-F（a）=$ e^{λa}-e^{-λb} $</p>
+<h3 id="三、正态分布"><a href="#三、正态分布" class="headerlink" title="三、正态分布"></a>三、正态分布</h3><p>设X为随机变量，概率密度函数为：</p>
+<script type="math/tex; mode=display">f(x)= \frac{1}{\sqrt{2\pi} \sigma}e^{- \frac{(x-\mu)^2}{2\sigma^2}} ,-\bowtie<x<+\bowtie</script><p>则称随机变量X服从参数为μ（-∞&lt;μ&lt;+∞）和$ σ^2 $（σ&gt;0）的正态分布，记为X～N（μ，$ σ^2 $）</p>
+<p>若X～N（μ，$ σ^2 $），则相应的分布函数为：</p>
+<script type="math/tex; mode=display">F（x）=\int_\infty^1 \frac{1}{\sqrt{2\pi} \sigma}e^{- \frac{(x-\mu)^2}{2\sigma^2}}dt</script><p>这个图像是一条光滑上升的S形曲线。</p>
+<p>总结：才学习在makedown插入数学公式，竟然花费了半天时间终于把这篇文章写完了，我理解全部内容的时间都没有插入这些公式的时间长，泪目，不过也学习到了知识，发现了一篇公式表真的很全面，很用心，多亏了这篇公式表，不然这篇文章可能要更久，下面附上链接：<br>[知乎] (<a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">https://katex.org/docs/supported.html</a>)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">概率论与数理统计</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/02/%E6%A6%82%E7%8E%87%E8%AE%BA%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%93%E9%A2%98-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-概率论的随机变量的专题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/01/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E4%B8%93%E9%A2%98/">&#39;概率论的随机变量的专题&#39;</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/01/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E4%B8%93%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-05-01T04:42:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="常用的离散型随机变量"><a href="#常用的离散型随机变量" class="headerlink" title="常用的离散型随机变量"></a>常用的离散型随机变量</h2><h3 id="一、二项分布"><a href="#一、二项分布" class="headerlink" title="一、二项分布"></a><strong>一、二项分布</strong></h3><p>将该随机试验独立重复地进行n次.</p>
+<p><font color=red>独立:</font><strong>是指各次试验的结果互不影响</strong></p>
+<p><font color=red>重复:</font><strong>是指在每次试验中P（A）=p保持不变</strong>，则称这n次独立重复试验叫n重伯努利试验。<br><strong>公式 :说明<script type="math/tex">\dbinom{n}{k}表示同时在序号1到n中挑选k个的不同方法共有\dbinom{n}{k}种</script></strong></p>
+<script type="math/tex; mode=display">P(X=k)= \dbinom{n}{k}p^k(1-p)^{n-k},0<p<1,k=0,1,....,n</script><p>称随机变量X服从参数为n，p的二项分布，记为X~B(n, p)</p>
+<p><font color=red>特别的当n=1时：<script type="math/tex">P(X=k)=\dbinom{1}{k}p^k(1-p)^{1-k}=p^k(1-p)^{1-k},0<p<1,k=0,1</script></font></p>
+<h3 id="二、-泊松分布"><a href="#二、-泊松分布" class="headerlink" title="二、 泊松分布"></a>二、 泊松分布</h3><p>设随机变量X的取值为0,1,2，…，n，….,相应的分布律为</p>
+<script type="math/tex; mode=display">P(X=k)=\frac {\lambda^k} {k!} *e^{-\lambda},\lambda>0,k=0,1,2,...,n...</script><p>称随机变量X服从参数为λ的泊松分布，记为X～P（λ）</p>
+<h4 id="适用的场景"><a href="#适用的场景" class="headerlink" title="适用的场景"></a>适用的场景</h4><p>泊松分布也是一种常用的离散型分布，它常常与计数过程相联系，<br>例如：<br>    （1）某一时段内某网站的点击量；<br>      （2）早高峰时间段内驶入高架道路的车辆数；<br>      （3）一本书上的印刷错误数．</p>
+<h3 id="泊松定理"><a href="#泊松定理" class="headerlink" title="泊松定理"></a>泊松定理</h3><p>　<font color=black> 在n重伯努利试验中，记A事件在一次试验中发生的概率为$ p_n $，如果当n→+∞时，有n$ p_n $→λ（&gt;0），则</p>
+<script type="math/tex; mode=display">\xrightarrow[n\longrightarrow+\Join]{lim}\dbinom{n}{k}p_n^k(1-p_n^{n-k}=\frac {\lambda^k} {k!} *e^{-\lambda})</script><h2 id="常用的连续型随机变量"><a href="#常用的连续型随机变量" class="headerlink" title="常用的连续型随机变量"></a>常用的连续型随机变量</h2><h3 id="一均匀分布"><a href="#一均匀分布" class="headerlink" title="一均匀分布"></a>一均匀分布</h3><p>设X为随机变量，对任意的二个实数a,b(a<b>),<font color=red>概率密度函数为</font>：</p>
+<script type="math/tex; mode=display">f(x) = \begin{cases}
+  \frac{1}{a-b} &\text{if } a<x<b \\
+   0 &\text{if } 其他
+\end{cases}</script><p>则称随机变量X服从区间（a，b）上的均匀分布，记为X～U（a，b）．</p>
+<p>若X～U（a，b），则相应的<font color=red>分布函数为</font>:</p>
+<script type="math/tex; mode=display">F(x) =\begin{cases} 0 &\text{if } x<a \\
+   \frac{x-a}{b-a}&\text{if } a\le x < b\\
+   1&\text{if }  x\ge b
+\end{cases}</script><p><font color = red>注意概率密度函数和分布函数的区别！</font></p>
+<h3 id="二、指数分布"><a href="#二、指数分布" class="headerlink" title="二、指数分布"></a>二、指数分布</h3><p>设<font color=red>X</font>为随机变量，概率密度函数为：</p>
+<script type="math/tex; mode=display">f（x） = \begin{cases}
+    \lambda e^{-\lambda x}&\text{if } x\ge 0 \\
+   0 &\text{if } 其他
+\end{cases}</script><p>则称随机变量X服从参数为λ的指数分布，记为X～E（λ）<br>若X～E（λ），则相应的<font color=red>分布函数为</font>：</p>
+<script type="math/tex; mode=display">F(x) = \begin{cases}
+   0 &\text{if } x<0\\
+   1-e^{-\lambda x} &\text{if } x\ge 0
+\end{cases}</script><p>由此得到，若X～E（λ），0&lt;a&lt;b，则P（a&lt;X≤b）=F（b）-F（a）=$ e^{λa}-e^{-λb} $</p>
+<h3 id="三、正态分布"><a href="#三、正态分布" class="headerlink" title="三、正态分布"></a>三、正态分布</h3><p>设X为随机变量，概率密度函数为：</p>
+<script type="math/tex; mode=display">f(x)= \frac{1}{\sqrt{2\pi} \sigma}e^{- \frac{(x-\mu)^2}{2\sigma^2}} ,-\bowtie<x<+\bowtie</script><p>则称随机变量X服从参数为μ（-∞&lt;μ&lt;+∞）和$ σ^2 $（σ&gt;0）的正态分布，记为X～N（μ，$ σ^2 $）</p>
+<p>若X～N（μ，$ σ^2 $），则相应的分布函数为：</p>
+<script type="math/tex; mode=display">F（x）=\int_\infty^1 \frac{1}{\sqrt{2\pi} \sigma}e^{- \frac{(x-\mu)^2}{2\sigma^2}}dt</script><p>这个图像是一条光滑上升的S形曲线。</p>
+<p>总结：才学习在makedown插入数学公式，竟然花费了半天时间终于把这篇文章写完了，我理解全部内容的时间都没有插入这些公式的时间长，泪目，不过也学习到了知识，发现了一篇公式表真的很全面，很用心，多亏了这篇公式表，不然这篇文章可能要更久，下面附上链接：<br>[知乎] (<a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">https://katex.org/docs/supported.html</a>)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">概率论与数理统计--随机变量</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/01/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E4%B8%93%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-boke" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/23/boke/">boke</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/23/boke/" class="archive-article-date">
+  	<time datetime="2020-04-23T12:44:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/23/boke/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-如何解决java不能构造泛型类型T的数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/23/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3java%E4%B8%8D%E8%83%BD%E6%9E%84%E9%80%A0%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8BT%E7%9A%84%E6%95%B0%E7%BB%84/">如何解决java不能构造泛型类型T的数组</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/23/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3java%E4%B8%8D%E8%83%BD%E6%9E%84%E9%80%A0%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8BT%E7%9A%84%E6%95%B0%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2020-04-23T12:22:26.141Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 如何解决java不能构造泛型类型T的数组<br>date: 2020-04-23 20:22:26<br>tags: 解决办法：利用数组构造器<br>​—-</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h4 id="比如表达式new-T-n-这样创建会产生错误的，因为这会被改为new-object-n"><a href="#比如表达式new-T-n-这样创建会产生错误的，因为这会被改为new-object-n" class="headerlink" title="比如表达式new T[n],这样创建会产生错误的，因为这会被改为new object[n]"></a>比如表达式new T[n],这样创建会产生错误的，因为这会被改为new object[n]</h4><p> 例如我们需要建立一个person对象数组，Stream接口有一个toArray方法可以实现返回object数组</p>
+<p>Object[] person =Stream.toArray();</p>
+<p>但是我们想要得到的是一个person引用数组，而不是Object引用数组</p>
+<p>流库利用构造器可以解决这个问题，可以把person[]::new传入toArray方法：</p>
+<p>Person[] person = stream.toArray(person[]::new);</p>
+<p>toArray调用这个构造器来调用得到一个正确类型的数组，然后填充这个数组并返回   </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/23/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3java%E4%B8%8D%E8%83%BD%E6%9E%84%E9%80%A0%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8BT%E7%9A%84%E6%95%B0%E7%BB%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-不知道怎么回事就部署成功了，实在有点迷" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,8 +516,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##我遇到的bug简直多的一匹，弄了一天，改的我都有点呕吐了，但是还不知道怎么就成功了<br>##真是让我头痛，现在再来push一篇博客看看，还能成功吗，我丢，真服了</p>
-
+        <h2 id="我遇到的bug简直多的一匹，弄了一天，改的我都有点呕吐了，但是还不知道怎么就成功了"><a href="#我遇到的bug简直多的一匹，弄了一天，改的我都有点呕吐了，但是还不知道怎么就成功了" class="headerlink" title="我遇到的bug简直多的一匹，弄了一天，改的我都有点呕吐了，但是还不知道怎么就成功了"></a>我遇到的bug简直多的一匹，弄了一天，改的我都有点呕吐了，但是还不知道怎么就成功了</h2><h2 id="真是让我头痛，现在再来push一篇博客看看，还能成功吗，我丢，真服了"><a href="#真是让我头痛，现在再来push一篇博客看看，还能成功吗，我丢，真服了" class="headerlink" title="真是让我头痛，现在再来push一篇博客看看，还能成功吗，我丢，真服了"></a>真是让我头痛，现在再来push一篇博客看看，还能成功吗，我丢，真服了</h2>
       
 
       
@@ -235,9 +578,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##惨痛的经历</p>
-<p>##看了这篇文章少入一点坑</p>
-
+        <h2 id="惨痛的经历"><a href="#惨痛的经历" class="headerlink" title="惨痛的经历"></a>惨痛的经历</h2><h2 id="看了这篇文章少入一点坑"><a href="#看了这篇文章少入一点坑" class="headerlink" title="看了这篇文章少入一点坑"></a>看了这篇文章少入一点坑</h2>
       
 
       
@@ -301,16 +642,12 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
@@ -445,6 +782,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">概率论与数理统计--随机变量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">概率论与数理统计</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
